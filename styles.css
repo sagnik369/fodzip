@@ -6,7 +6,6 @@
 }
 
 body {
-    overflow-x: hidden;
     height: 1000px;
 }
 
@@ -64,6 +63,10 @@ body > label:active {
     opacity: 0.18;
 }
 
+#switch:checked~header > input::placeholder {
+    color: black;
+}
+
 #switch:checked~main > section:nth-of-type(1) {
     background-color: black;
 }
@@ -114,6 +117,7 @@ body > label:active {
 
 ::-webkit-scrollbar{
     width: 6px;
+    height: 0;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -203,7 +207,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100vw;
+    width: 100%;
     height: 95vh;
     background-image: url(https://images.pexels.com/photos/1026688/pexels-photo-1026688.jpeg?cs=srgb&dl=curry-delicious-food-delicious-indian-food-1026688.jpg&fm=jpg);
     background-repeat: no-repeat;
@@ -245,6 +249,7 @@ header > button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     letter-spacing: 1.3px;
+    color: rgb(24, 24, 24);
 }
 
 header > button:hover {
@@ -286,10 +291,10 @@ body > main > section:nth-of-type(1) > article > div {
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    width: 14vw;
-    height: 27vw;
-    min-width: 250px;
-    min-height: 300px;
+    width: 16vw;
+    height: 28vw;
+    min-width: 160px;
+    min-height: 320px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 10px;
@@ -314,6 +319,7 @@ body > main > section:nth-of-type(2) {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     padding: 100px 10vw 0 10vw;
 }
 
@@ -338,11 +344,10 @@ body > main > section:nth-of-type(2) > p > img {
 
 body > main > section:nth-of-type(3) {
     height: 60vh;
+    position: relative;
+    overflow-x: hidden;
     padding: 100px 10vw 100px 10vw;
     background-color: ghostwhite;
-}
-
-body > main > section:nth-of-type(3) {
     color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 7vh;
@@ -357,8 +362,8 @@ body > main > section:nth-of-type(3) > article {
     z-index: 3;
     margin-top: 50px;
     background-color: ghostwhite;
-    animation-name: comments-anime;
-    animation-duration: 30s;
+    animation-name: comments;
+    animation-duration: 35s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
@@ -376,7 +381,7 @@ body > main > section:nth-of-type(3) > article > div {
     width: 300px;
     min-height: 200px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: initial;
+    font-size: 24px;
     text-align: center;
     padding: 40px 20px 0 20px;
     border: 1px solid hotpink;
@@ -493,18 +498,13 @@ footer > div {
         padding: 70px 20px 70px 20px;
     }
 
-    body > main > section:nth-of-type(1) > article > div {
-        width: 50px;
-        height: 370px;
-    }
-
     body > main > section:nth-of-type(2) {
         padding: 50px 20px 50px 20px;
         flex-direction: column;
     }
 
     body > main > section:nth-of-type(2) > img {
-        width: 350px;
+        width: 270px;
     }
 
     body > main > section:nth-of-type(2) > p {
@@ -512,6 +512,7 @@ footer > div {
     }
 
     body > main > section:nth-of-type(3) {
+        overflow-x: hidden;
         font-size: 28px;
     }
 
@@ -524,7 +525,7 @@ footer > div {
     }
 
     body > main > section:nth-of-type(4) > img {
-        width: 330px;
+        width: 80vw;
     }
 
     body > main > section:nth-of-type(4) > div > p {
@@ -568,10 +569,11 @@ footer > div {
     }
 }
 
-@keyframes comments-anime {
+@keyframes comments {
     0% {
         transform: translateX(-80%);
     }
+
     100% {
         transform: translateX(20%);
     }
