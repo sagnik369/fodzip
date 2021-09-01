@@ -57,7 +57,7 @@ body > label:active {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95vh;
     z-index: 5;
     background-color: black;
     opacity: 0.18;
@@ -440,6 +440,11 @@ footer > div {
 
 
 @media (max-width: 750px) {
+
+    body > label {
+        display: none;
+    }
+
     nav > section:first-of-type {
         display: none;
     }
@@ -449,7 +454,7 @@ footer > div {
     }
 
     nav > section:last-of-type > label {
-        margin: 20px 85px 20px 0;
+        margin: 20px 20px 20px 0;
         cursor: pointer;
     }
 
