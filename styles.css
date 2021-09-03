@@ -122,10 +122,11 @@ body > label:active {
 
 ::-webkit-scrollbar-thumb{
     background: sienna;
+    border-radius: 30px;
 }
 
 ::-webkit-scrollbar-track{
-    background: aliceblue;
+    background: snow;
 }
 
 /* Navigation */
@@ -299,9 +300,14 @@ body > main > section:nth-of-type(1) > article > div {
     padding-right: 20px;
     border-radius: 10px;
     background-color: whitesmoke;
-    box-shadow: 1px 1px 20px grey;
+    box-shadow: 1px 1px 10px grey;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 19px;
+}
+
+body > main > section:nth-of-type(1) > article > div:hover {
+    transition: box-shadow 0.4s;
+    box-shadow: 1px 1px 30px grey;
 }
 
 body > main > section:nth-of-type(1) > article > div > h2 {
@@ -458,14 +464,40 @@ footer > div {
         cursor: pointer;
     }
 
-    #null:checked~#submenu {
+    #submenu {
         padding: 40px 0 40px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 25px;
         position: absolute;
+        width: 0;
+        height: 100vh;
+        top: 10vh;
+        right: 0;
+        z-index: 10;
+        background-color: aliceblue;
+        box-shadow: 0 5px 20px grey;
+    }
+
+    #submenu > div {
+        background-color: seashell;
+        padding: 20px 0 20px 0;
+        text-align: center;
+        width: 150vw;
+        opacity: 0;
+    }
+
+
+    #null:checked~#submenu {
+        padding: 40px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 25px;
+        position: absolute;
         width: 300px;
+        transition: width 1s;
         height: 100vh;
         top: 10vh;
         right: 0;
@@ -474,11 +506,13 @@ footer > div {
         box-shadow: 0 5px 20px grey;
     }
     
-    #submenu > div {
+    #null:checked~#submenu > div {
         background-color: seashell;
         padding: 20px 0 20px 0;
         text-align: center;
         width: 100%;
+        opacity: 1;
+        transition: width 0.5s, opacity 1.5s;
     }
 
     header {
