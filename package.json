@@ -1,0 +1,27 @@
+{
+  "name": "fodzip",
+  "version": "1.0.0",
+  "description": "HTML CSS, just HTML and CSS. In case you were wondering, no javascript. \r If you have already seen the source code, then yes I do not use a lot of class or id selectors, instead I use a lot of combinators: it is then easier for me to memorize and visualize the DOM structure.\r I do not know what exact kind of website it is, food based, maybe.\r Some of the icons were not loading properly and showing an error in the console if I used a CDN link(or whatever that is called). So I had to download all of them. \r None of the links work; only the night mode toggler does.\r It took me almost 50 hours to make the webpage.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass scss/main.scss css/style.css -w",
+    "autoprefix": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagnik369/fodzip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagnik369/fodzip/issues"
+  },
+  "homepage": "https://github.com/sagnik369/fodzip#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "autoprefixer": "^10.3.4",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6"
+  }
+}
