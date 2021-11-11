@@ -1,0 +1,37 @@
+//animation when navigation links are hovered
+
+@keyframes border-shrink {
+    0% {
+        padding: 50px 0 50px 0;
+    }
+
+    100% {
+        padding: 15px 0 15px 0;
+    }
+}
+
+//navbar animation when user loads the page
+
+@keyframes nav-enter {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+//continuous animation for the moving customer reviews section
+
+@keyframes comments {
+    0% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(20%);
+    }
+}

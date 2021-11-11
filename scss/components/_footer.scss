@@ -1,0 +1,31 @@
+footer {
+    height: 60px;
+    font-family: $hlvt;
+    @include flx-bx(space-around);
+    background-color: $sblue;
+
+    //div tag containing the icons for social medias
+
+    & > div {
+        @include flx-bx(unset, unset);
+        gap: 8vw;
+
+        & > svg {
+            width: 2rem;
+            height: 2rem;
+
+            &:nth-of-type(1) {
+                fill: rgb(39, 61, 180);
+            }
+            &:nth-of-type(2) {
+                fill: purple;
+            }
+            &:nth-of-type(3) {
+                fill: rgb(100, 201, 241);
+            }
+            &:nth-of-type(4) {
+                fill: red;
+            }
+        }
+    }
+}

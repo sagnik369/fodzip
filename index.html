@@ -6,7 +6,6 @@
         <meta name="description" content="Order fast food faster from your nearby restaurants fast. Do not do fast.">
         <link href="icons/rTLngEET8.png" rel="icon" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap" rel="stylesheet">
         <link href="css/style.min.css" rel="stylesheet" type="text/css">
@@ -15,32 +14,44 @@
     <body>
         <input id="switch" type="checkbox">
         <label for="switch">
-            <img src="icons/dark_mode_black_48dp.svg" alt="mode switch">
+            <svg>
+                <use href="./icons/sprite.svg#icon-moon-stroke">
+            </svg>
         </label>
         <nav>
             <h1>FODZIP</h1>
-            <section>
-                <div>HOME</div>
-                <div>SIGN IN</div>
-                <div>CART</div>
-                <div>PRO<img src="icons/verified_black_24dp.svg" alt="pro"></div>
-            </section>
+            <ul>
+                <li>HOME</li>
+                <li>SIGN IN</li>
+                <li>CART</li>
+                <li>PRO
+                    <svg>
+                        <use href="./icons/sprite.svg#icon-verified">
+                    </svg>
+                </li>
+            </ul>
             <section>
                 <input id="null" type="checkbox">
                 <label for="null">
                     <div></div>
                 </label>
-                <div id="submenu">
-                    <div>HOME</div>
-                    <div>SIGN IN</div>
-                    <div>CART</div>
-                    <div>PRO<img src="icons/verified_black_24dp.svg" alt=""></div>
-                    <div>
+                <ul id="submenu">
+                    <li>HOME</li>
+                    <li>SIGN IN</li>
+                    <li>CART</li>
+                    <li>PRO
+                        <svg>
+                            <use href="./icons/sprite.svg#icon-verified">
+                        </svg>
+                    </li>
+                    <li>
                         <label for="switch">
-                            <img src="icons/dark_mode_black_48dp.svg" alt="mode switch">
+                            <svg>
+                                <use href="./icons/sprite.svg#icon-moon-stroke">
+                            </svg>
                         </label>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
         </nav>
         <header>
@@ -52,30 +63,34 @@
                 <option>City 3</option>
                 <option>City 4</option>
             </datalist>
-            <button type="button"><img src="icons/location_on_black_24dp.svg" alt=""><p>LOCATE ME</p></button>
+            <button type="button">
+                <svg>
+                    <use href="./icons/sprite.svg#icon-location">
+                </svg>
+                	LOCATE ME</button>
         </header>
         <main>
             <section>
-                <div>
+                <figure>
                     <img src="https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/brand_features/meals.png" alt="north indian food background">
                     <h2>20000+ meals served</h2>
                     and counting...
-                </div>
-                <div>
+                </figure>
+                <figure>
                     <img src="https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/brand_features/stores.png" alt="stores">
                     <h2>120+ stores</h2>
                     all across India.
-                </div>
-                <div>
+                </figure>
+                <figure>
                     <img src="https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/brand_features/time.png" alt="time">
                     <h2>Lightning fast delivery</h2>
                     unquestionably fast.
-                </div>
-                <div>
+                </figure>
+                <figure>
                     <img src="https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/brand_features/rating.png" alt="rating">
                     <h2>1000+ 5 star reviws</h2>
                     keeps us motivated.
-                </div>
+                </figure>
             </section>
             <section>
                 <img src="https://foodhub.co.uk/compressed_images/mobile-app.png" alt="mobile app">
@@ -88,15 +103,40 @@
             <section>
                 <p>CUSTOMER FEEDBACK</p>
                 <article>
-                    <div>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                    <div>
+                        <figure>
+                            <figcaption>Michael Palmer</figcaption>
+                            <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="user">
+                        </figure>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     </div>
-                    <div>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    <div>
+                        <figure>
+                            <figcaption>Hazel Steward</figcaption>
+                            <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="user">
+                        </figure>
+                        <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour).</p>
                     </div>
-                    <div>It is a long established fact that a reader will be distracted by the readable. Various versions have evolved over the years.
+                    <div>
+                        <figure>
+                            <figcaption>Leona Mckinney</figcaption>
+                            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="user">
+                        </figure>
+                        <p>It is a long established fact that a reader will be distracted by the readable. Various versions have evolved over the years.</p>
                     </div>
-                    <div>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                    <div>
+                        <figure>
+                            <figcaption>Alfred Ray</figcaption>
+                            <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="user">
+                        </figure>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     </div>
-                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    <div>
+                        <figure>
+                            <figcaption>Michelle Bailey</figcaption>
+                            <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="user">
+                        </figure>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                     </div>
                 </article>
             </section>
@@ -110,12 +150,20 @@
             </section>
         </main>
         <footer>
-            Copyright@2021
+            &copy; FODZIP 2021
             <div>
-                <img src="icons/facebook.png" alt="facebook icon">
-                <img src="icons/instagram.png" alt="instagram icon">
-                <img src="icons/twitter.png" alt="twitter icon">
-                <img src="icons/youtube.png" alt="youtube icon">
+                <svg>
+                    <use href="./icons/sprite.svg#icon-facebook">
+                </svg>
+                <svg>
+                    <use href="./icons/sprite.svg#icon-instagram">
+                </svg>
+                <svg>
+                    <use href="./icons/sprite.svg#icon-twitter">
+                </svg>
+                <svg>
+                    <use href="./icons/sprite.svg#icon-youtube">
+                </svg>
             </div>
         </footer>
     </body>

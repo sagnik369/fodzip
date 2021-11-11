@@ -1,0 +1,25 @@
+//mixin for flex-box by default properties are set to center if no values are passed
+
+@mixin flx-bx($jsc: center, $ali: center, $wrp: no-wrap) {
+    display: flex;
+    justify-content: $jsc;
+    align-items: $ali;
+    flex-wrap: $wrp;
+}
+
+//mixin for background image
+
+@mixin bck-img($img, $rpt: repeat, $pos: center, $sz: unset, $att: unset) {
+    background-image: $img;
+    background-repeat: $rpt;
+    background-position: $pos;
+    background-size: $sz;
+    background-attachment: $att;
+}
+
+//mixin for border
+
+@mixin brd-mov($col) {
+    border-top: 1px solid $col;
+    border-bottom: 1px solid $col;
+}

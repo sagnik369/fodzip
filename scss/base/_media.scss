@@ -1,0 +1,226 @@
+
+@media (max-width: 750px) {
+
+    //dark mode icon in large screen hidden
+
+    body > label {
+        display: none;
+    }
+
+    nav {
+        height: 3.5rem;
+
+        & > h1 {
+            font-size: 1.6rem;
+        }
+
+        //navigation links in large screen hidden
+
+        & > ul {
+            display: none;
+        }
+
+        //drop-down menu icon in small screen shown
+
+        & > section {
+            display: block;
+  
+            //cursor behaviour set    
+
+            & > label {
+                cursor: pointer;
+
+                //This div is for creating the animated menu icon 
+
+                & > div {
+                    position: relative;
+                    width: 35px;
+                    height: 4px;
+                    right: 3vw;
+                    background-color: $black;
+                    transition: all 0.2s;
+
+                    &::before, &::after {
+                        content: '';
+                        position: absolute;
+                        height: inherit;
+                        width: inherit;
+                        background-color: $black;
+                        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    }
+
+                    &::before {
+                        top: -10px;
+                    }
+
+                    &::after {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    //submenu initialized
+
+    #submenu {
+        @include flx-bx(space-evenly, flex-end);
+        flex-direction: column;
+        position: absolute;
+        width: 300px;
+        height: 90vh;
+        top: 3.5rem;
+        right: 0;
+        z-index: 10;
+        transform: translateX(100%);
+        background-color: rgba($awhite, 0.7);
+        backdrop-filter: blur(15px);
+        list-style-type: none;
+        box-shadow: 0 5px 20px grey;
+        transition: transform 0.2s;
+
+        //navigation links inside submenu
+
+        & > li {
+            background: transparent;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s;
+
+            & > svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+            & > label > svg {
+                width: 2.5rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    //submenu shown when the user clicks on the above dropdown
+
+    #null:checked+label {
+        & > div {
+            background: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(315deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-315deg);
+            }
+        }
+    }
+
+    #null:checked~#submenu {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transform: translateX(0);
+
+        & > li {
+            transform: translateX(0);
+        }
+    }
+    
+    //header and hero section
+
+    header {
+        gap: 20px;
+        flex-direction: column;
+
+        //location input field
+        
+        & > input {
+            font-size: 90%;
+            border-radius: 5px;
+            width: 80vw;
+            height: 55px;
+        }
+
+        & > button {
+            border-radius: 5px;
+            width: 170px;
+            height: 55px
+        }
+    
+    }
+
+    //rest of the body
+
+    body > main > section:nth-of-type(1) {
+        grid-template-columns: repeat(1, 100%);
+        padding: 70px 20px;
+    }
+
+
+    body > main > section:nth-of-type(2) {
+        padding: 50px 20px;
+        flex-direction: column;
+
+        & > img {
+            width: 270px;
+        }
+
+        & > p {
+            font-size: 30px;
+        }
+    }
+
+
+    body > main > section:nth-of-type(3) {
+        overflow-x: hidden;
+        font-size: 24px;
+        padding: 40px 10vw;
+        height: 70vh;
+
+        & > article {          
+            & > div {
+                background-size: 120px;
+                width: 20rem;
+                height: 14rem;
+                padding: .4rem;
+                border-radius: .7rem;
+                
+                & > p {
+                    padding: .5rem .7rem;
+                    border-radius: .7rem;
+                }
+            }
+        }
+    }
+
+
+    body > main > section:nth-of-type(4) {
+        & > iframe {
+            height: 300px;
+            width: 75vw;
+        }
+
+        & > div{
+            & > p {
+                font-size: 40px;
+            }
+
+            & > li {
+                font-size: 16px;
+            }
+        }
+    }
+
+    //footer section
+
+    body > footer {
+        height: auto;
+        font-size: 17px;
+        flex-direction: column;
+        row-gap: 30px;
+        padding: 15px 0 20px 0;
+    }
+}

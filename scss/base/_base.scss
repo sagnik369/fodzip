@@ -1,0 +1,32 @@
+//initialises the margin and padding for every element to 0
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//sets box-sizing and overflow hidden in x direction
+
+body {
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+//scrollbar cutomizations where height of horizontal scrollbar is set to 0
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 0;
+    transition: width .3s;
+
+    &-thumb{
+        background: sienna;
+        border-radius: 30px;
+    }
+    
+    &-track{
+        background: snow;
+    }
+}

@@ -1,0 +1,63 @@
+body > main > section:nth-of-type(3) {
+    height: 85vh;
+    position: relative;
+    overflow-x: hidden;
+    padding: 90px 10vw;
+    background-color: $gwhite;
+    color: $grey;
+    font-family: $verdana;
+    font-size: 29px;
+    font-weight: lighter;
+
+    & > article {
+        @include flx-bx(unset);
+        gap: 60px;
+        position: absolute;
+        z-index: 3;
+        margin: 50px;
+        background-color: $gwhite;
+        animation: comments 35s linear 0s infinite alternate;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        & > div {
+            @include bck-img(url(https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/quote-mark.svg), no-repeat, top left, 150px);
+            width: 330px;         
+            height: 260px;
+            padding: 1rem;
+            border: 1px solid $hpink;
+            border-radius: 30px;
+            box-shadow: 2px 10px 20px grey;
+
+            & > figure {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: flex-end;
+                padding: .2rem;
+                
+                & > img {
+                    border: 1px solid $ored;
+                    border-radius: 50%;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                
+                & > figcaption {
+                    font-size: .75rem;
+                }
+            }
+            
+            & > p {
+                padding: .9rem 1.1rem;
+                border: 1px solid $sgreen;
+                border-radius: 1rem;
+                font-family: $aleo;
+                font-size: 1.3rem;
+                line-height: 140%;
+            }
+        }
+    }
+}

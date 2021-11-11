@@ -1,0 +1,26 @@
+body > main > section:nth-of-type(4) {
+    @include flx-bx(space-around, center, wrap);
+    gap: 60px;
+    text-align: center;
+    font-family: $lsx;
+    padding: 100px 5vw;
+    @include bck-img(url(https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/curly_arrow.png), no-repeat, top right, 250px);
+    background-color: $fwhite;
+
+    & > div {
+        & > p {
+            font-size: 70px;
+        }
+
+        & > li {
+            font-family: $gill;
+            font-size: 20px;
+        }
+    }
+
+    & > iframe {
+        border: 1px solid $sgreen;
+        height: 400px;
+        width: 500px;
+    }
+}

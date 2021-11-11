@@ -1,0 +1,42 @@
+body > main > section:nth-of-type(1) {
+    padding: 150px 0;
+    background-color: $cwhite;
+    @include bck-img(url(https://d1ehbrjqbat2o3.cloudfront.net/20210825104726/assets/images/curly_arrow.png));
+    transform: scaleX(-1);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    row-gap: 100px;
+    width: 100%;
+    
+    & > figure {
+        @include flx-bx;
+        flex-direction: column;
+        row-gap: 30px;
+        width: 19vw;
+        height: 28vw;
+        min-width: 210px;
+        min-height: 310px;
+        padding: 0 20px;
+        border-radius: 10px;
+        background-color: $wwhite;
+        box-shadow: 1px 1px 10px grey;
+        font-family: $trlx;
+        font-size: 19px;
+        transform: scaleX(-1);
+
+        &:hover {
+            transition: box-shadow 0.4s;
+            box-shadow: 1px 1px 30px grey;
+        }
+
+        & > h2 {
+            font-size: 27px;
+            text-align: center;
+        }
+
+        & > img {
+            height: 100px;
+        }            
+    }
+}
